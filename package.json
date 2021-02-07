@@ -1,8 +1,8 @@
 {
   "name": "KomaInvestor",
-  "homepage": "http://Ivan-Corporation.github.io/Investing-App",
   "version": "1.2.0",
   "private": true,
+  "homepage": "https://ivan-corporation.github.io/Investing-App/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.15.1",
     "bootstrap": "4.5.3",

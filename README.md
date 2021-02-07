@@ -1,3 +1,3 @@
 # React Investing App
-"# Investing-App" 
-http://Ivan-Corporation.github.io/Investing-App
+## Investing-App:
+# "https://ivan-corporation.github.io/Investing-App/",
