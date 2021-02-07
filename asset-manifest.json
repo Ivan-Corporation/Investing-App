@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Investing-App/static/css/main.2823efc5.chunk.css",
+    "main.js": "/Investing-App/static/js/main.39c6acc0.chunk.js",
+    "main.js.map": "/Investing-App/static/js/main.39c6acc0.chunk.js.map",
+    "runtime-main.js": "/Investing-App/static/js/runtime-main.8c7f41f8.js",
+    "runtime-main.js.map": "/Investing-App/static/js/runtime-main.8c7f41f8.js.map",
+    "static/css/2.2188297b.chunk.css": "/Investing-App/static/css/2.2188297b.chunk.css",
+    "static/js/2.80b23cdc.chunk.js": "/Investing-App/static/js/2.80b23cdc.chunk.js",
+    "static/js/2.80b23cdc.chunk.js.map": "/Investing-App/static/js/2.80b23cdc.chunk.js.map",
+    "index.html": "/Investing-App/index.html",
+    "static/css/2.2188297b.chunk.css.map": "/Investing-App/static/css/2.2188297b.chunk.css.map",
+    "static/css/main.2823efc5.chunk.css.map": "/Investing-App/static/css/main.2823efc5.chunk.css.map",
+    "static/js/2.80b23cdc.chunk.js.LICENSE.txt": "/Investing-App/static/js/2.80b23cdc.chunk.js.LICENSE.txt",
+    "static/media/Penultimo.jpg": "/Investing-App/static/media/Penultimo.955e2333.jpg",
+    "static/media/arrow_green.3130709c.png": "/Investing-App/static/media/arrow_green.3130709c.png",
+    "static/media/arrow_red.bb3ae520.png": "/Investing-App/static/media/arrow_red.bb3ae520.png",
+    "static/media/boening.52284e68.png": "/Investing-App/static/media/boening.52284e68.png",
+    "static/media/all.min.css": "/Investing-App/static/media/fa-solid-900.46fdbd2d.woff",
+    "static/media/gazprom.91f61ce0.png": "/Investing-App/static/media/gazprom.91f61ce0.png",
+    "static/media/nucleo-icons.css": "/Investing-App/static/media/nucleo.bd5cce8b.eot",
+    "static/media/react-logo.faec22a9.png": "/Investing-App/static/media/react-logo.faec22a9.png",
+    "static/media/tesla.386a4c9c.png": "/Investing-App/static/media/tesla.386a4c9c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c7f41f8.js",
+    "static/css/2.2188297b.chunk.css",
+    "static/js/2.80b23cdc.chunk.js",
+    "static/css/main.2823efc5.chunk.css",
+    "static/js/main.39c6acc0.chunk.js"
+  ]
+}
