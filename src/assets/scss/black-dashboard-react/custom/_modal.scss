@@ -159,3 +159,34 @@
     margin: 0px 25px 20px;
   }
 }
+
+.modal-registration{
+  .modal-dialog{
+    margin: 30px auto;
+    max-width: 650px;
+    input{
+      border: none;
+      font-size: 17px;
+      font-weight: 100;
+    }
+    span{
+      font-size: 35px;
+      color: $search-gray;
+    }
+  }
+  .modal-content{
+    .modal-header{
+      padding: 24px;
+    }
+  }
+
+  .modal-header .close{
+    color: $dark-background;
+    top: 30px !important;
+  }
+
+  .modal-footer{
+    border-top: 2px solid #f9f9f9;
+    margin: 0px 25px 20px;
+  }
+}

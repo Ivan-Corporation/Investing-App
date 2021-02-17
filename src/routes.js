@@ -24,14 +24,7 @@ var routes = [
     component: Icons,
     layout: "/admin",
   },
-  {
-    path: "/map",
-    name: "Карта бирж (Новости)",
-    rtlName: "خرائط",
-    icon: "tim-icons icon-globe-2",
-    component: Map,
-    layout: "/admin",
-  },
+  
   {
     path: "/notifications",
     name: "Уведомления",

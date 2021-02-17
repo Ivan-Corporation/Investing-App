@@ -2,6 +2,8 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 
+import { useState } from 'react';
+
 // reactstrap components
 import {
   Button,
@@ -20,6 +22,13 @@ import {
   Modal,
   NavbarToggler,
   ModalHeader,
+  ModalFooter,
+  ModalBody,
+  FormGroup,
+  Form,
+  FormFeedback,
+  FormText,
+  Label
 } from "reactstrap";
 
 function AdminNavbar(props) {
@@ -54,8 +63,28 @@ function AdminNavbar(props) {
   const toggleModalSearch = () => {
     setmodalSearch(!modalSearch);
   };
+
+
+  // Modal logic
+  const {
+  buttonLabel,
+  className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggleRegistration = () => setModal(!modal);
+
+  const closeBtn = <button className="close" onClick={toggleRegistration}>&times;</button>;
+  
   return (
     <>
+
+    
+      
+
+
+
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
         <Container fluid>
           <div className="navbar-wrapper">
@@ -74,6 +103,7 @@ function AdminNavbar(props) {
               {props.brandText}
             </NavbarBrand>
           </div>
+          
           <NavbarToggler onClick={toggleCollapse}>
             <span className="navbar-toggler-bar navbar-kebab" />
             <span className="navbar-toggler-bar navbar-kebab" />
@@ -82,6 +112,23 @@ function AdminNavbar(props) {
 
           <Collapse navbar isOpen={collapseOpen}>
             <Nav className="ml-auto" navbar>
+
+            <InputGroup className="search-bar">
+                <Button color="danger" onClick={toggleRegistration}>
+                  <i className="tim-icons icon-spaceship" />Авторизация
+                  
+                </Button>
+              </InputGroup>
+
+              <InputGroup className="search-bar">
+                <Button color="info" onClick={toggleRegistration}>
+                  <i className="tim-icons icon-spaceship" />Авторизация
+                  
+                </Button>
+              </InputGroup>
+
+
+
               <InputGroup className="search-bar">
                 <Button color="link" onClick={toggleModalSearch}>
                   <i className="tim-icons icon-zoom-split" />
@@ -89,36 +136,12 @@ function AdminNavbar(props) {
                 </Button>
               </InputGroup>
 
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  data-toggle="dropdown"
-                  nav
-                >
-                  <div className="notification d-none d-lg-block d-xl-block" />
-                  <i className="tim-icons icon-sound-wave" />
-                  <p className="d-lg-none">Уведомления</p>
-                </DropdownToggle>
-                <DropdownMenu className="dropdown-navbar" right tag="ul">
-                  <NavLink tag="li">
-                    <DropdownItem className="nav-item">
-                    Уведомление 1
-                    </DropdownItem>
-                  </NavLink>
-                  <NavLink tag="li">
-                    <DropdownItem className="nav-item">
-                    Уведомление 2
-                    </DropdownItem>
-                  </NavLink>
-                  <NavLink tag="li">
-                    <DropdownItem className="nav-item">
-                    Уведомление 3
-                    </DropdownItem>
-                  </NavLink>
-                  
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              
+
+
+              
+
+
               <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret
@@ -153,6 +176,26 @@ function AdminNavbar(props) {
           </Collapse>
         </Container>
       </Navbar>
+
+
+      
+      <Modal 
+      isOpen={modal} 
+      toggle={toggleRegistration} 
+      className={className}>
+        <ModalHeader 
+        toggle={toggleRegistration}>Авторизация</ModalHeader>
+        <ModalBody>
+        
+        </ModalBody>
+        <ModalFooter>
+          
+        </ModalFooter>
+      </Modal>
+
+
+
+      
       <Modal
         modalClassName="modal-search"
         isOpen={modalSearch}
@@ -169,6 +212,10 @@ function AdminNavbar(props) {
           </button>
         </ModalHeader>
       </Modal>
+      
+      
+      
+
     </>
   );
 }

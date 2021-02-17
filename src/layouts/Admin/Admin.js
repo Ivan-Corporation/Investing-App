@@ -5,7 +5,7 @@ import PerfectScrollbar from "perfect-scrollbar";
 
 // core components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
-import Footer from "components/Footer/Footer.js";
+
 import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
@@ -108,10 +108,7 @@ function Admin(props) {
                 {getRoutes(routes)}
                 <Redirect from="*" to="/admin/stock-info" />
               </Switch>
-              {
-                // we don't want the Footer to be rendered on map page
-                location.pathname === "/admin/maps" ? null : <Footer fluid />
-              }
+             
             </div>
           </div>
           <FixedPlugin bgColor={color} handleBgClick={changeColor} />
