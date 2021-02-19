@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-
+import Footer from "components/Footer/Footer.js";
 // core components
 import AdminNavbar from "components/Navbars/AdminNavbar.js";
 
@@ -108,7 +108,10 @@ function Admin(props) {
                 {getRoutes(routes)}
                 <Redirect from="*" to="/admin/stock-info" />
               </Switch>
-             
+              {
+                // we don't want the Footer to be rendered on map page
+                location.pathname === "/admin/maps" ? null : <Footer fluid />
+              }
             </div>
           </div>
           <FixedPlugin bgColor={color} handleBgClick={changeColor} />

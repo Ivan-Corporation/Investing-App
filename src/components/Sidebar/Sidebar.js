@@ -101,7 +101,11 @@ function Sidebar(props) {
                 {logoText}
               </div>
             ) : null}
+
+            
             <Nav>
+              
+              <hr></hr>
               {routes.map((prop, key) => {
                 if (prop.redirect) return null;
                 return (
@@ -125,13 +129,19 @@ function Sidebar(props) {
                     </NavLink>
                   </li>
                 );
-              })}<hr></hr>
-              <li className="active-pro">
+              })}
+              
+
+            {/* <hr></hr> */}
+
+              {/* <li className="active-pro">
                 <ReactstrapNavLink href="/stock-info">
                   <i className="tim-icons icon-shape-star" />
                   <p>Премиум</p>
                 </ReactstrapNavLink>
-              </li>
+              </li> */}
+              
+              
             </Nav>
           </div>
         </div>

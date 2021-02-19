@@ -67,21 +67,32 @@ function AdminNavbar(props) {
 
   // Modal logic
   const {
-  buttonLabel,
-  className
+    buttonLabel,
+    className
   } = props;
 
-  const [modal, setModal] = useState(false);
 
-  const toggleRegistration = () => setModal(!modal);
+  const [modalRegistration, setModalRegistration] = useState(false);
 
-  const closeBtn = <button className="close" onClick={toggleRegistration}>&times;</button>;
+  const [modalAuthorisation, setModalAuthorisation] = useState(false);
+
   
+
+  const toggleRegistration = () => setModalRegistration(!modalRegistration);
+
+  const toggleAuthorisation = () => setModalAuthorisation(!modalAuthorisation);
+
+
+
+  
+
+  
+
   return (
     <>
 
-    
-      
+
+
 
 
 
@@ -103,7 +114,7 @@ function AdminNavbar(props) {
               {props.brandText}
             </NavbarBrand>
           </div>
-          
+
           <NavbarToggler onClick={toggleCollapse}>
             <span className="navbar-toggler-bar navbar-kebab" />
             <span className="navbar-toggler-bar navbar-kebab" />
@@ -113,17 +124,17 @@ function AdminNavbar(props) {
           <Collapse navbar isOpen={collapseOpen}>
             <Nav className="ml-auto" navbar>
 
-            <InputGroup className="search-bar">
+              <InputGroup className="search-bar">
                 <Button color="danger" onClick={toggleRegistration}>
-                  <i className="tim-icons icon-spaceship" />Авторизация
-                  
+                  <i className="tim-icons icon-spaceship" />Регистрация
+
                 </Button>
               </InputGroup>
 
               <InputGroup className="search-bar">
-                <Button color="info" onClick={toggleRegistration}>
-                  <i className="tim-icons icon-spaceship" />Авторизация
-                  
+                <Button color="info" onClick={toggleAuthorisation}>
+                  <i className="tim-icons icon-single-02" />Авторизация
+
                 </Button>
               </InputGroup>
 
@@ -132,14 +143,15 @@ function AdminNavbar(props) {
               <InputGroup className="search-bar">
                 <Button color="link" onClick={toggleModalSearch}>
                   <i className="tim-icons icon-zoom-split" />
-                  <span className="d-lg-none d-md-block">Поиск</span>
+                  <h4>Поиск</h4>
+
                 </Button>
               </InputGroup>
 
-              
 
 
-              
+
+
 
 
               <UncontrolledDropdown nav>
@@ -178,24 +190,41 @@ function AdminNavbar(props) {
       </Navbar>
 
 
-      
-      <Modal 
-      isOpen={modal} 
-      toggle={toggleRegistration} 
-      className={className}>
-        <ModalHeader 
-        toggle={toggleRegistration}>Авторизация</ModalHeader>
+
+
+      <Modal
+        isOpen={modalAuthorisation}
+        toggle={toggleAuthorisation}
+        className={className}>
+        <ModalHeader
+          toggle={toggleAuthorisation}>Авторизация</ModalHeader>
         <ModalBody>
-        
+
         </ModalBody>
         <ModalFooter>
-          
+
         </ModalFooter>
       </Modal>
 
 
 
-      
+      <Modal
+        isOpen={modalRegistration}
+        toggle={toggleRegistration}
+        className={className}>
+        <ModalHeader
+          toggle={toggleRegistration}>Регистрация</ModalHeader>
+        <ModalBody>
+
+        </ModalBody>
+        <ModalFooter>
+
+        </ModalFooter>
+      </Modal>
+
+
+
+
       <Modal
         modalClassName="modal-search"
         isOpen={modalSearch}
@@ -212,9 +241,9 @@ function AdminNavbar(props) {
           </button>
         </ModalHeader>
       </Modal>
-      
-      
-      
+
+
+
 
     </>
   );

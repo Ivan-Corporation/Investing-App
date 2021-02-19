@@ -6,8 +6,17 @@ import Notifications from "views/Notifications.js";
 import TableList from "views/TableList.js";
 
 import UserProfile from "views/UserProfile.js";
+import About from "views/About";
 
 var routes = [
+  {
+    path: "/stock-about",
+    name: "О проекте",
+    rtlName: "معلومات عن العمل",
+    icon: "tim-icons icon-bulb-63",
+    component: About,
+    layout: "/admin",
+  },
   {
     path: "/stock-info",
     name: "Основная информация",
@@ -24,7 +33,14 @@ var routes = [
     component: Icons,
     layout: "/admin",
   },
-  
+  {
+    path: "/stock-info",
+    name: "Криптовалюта",
+    rtlName: "معلومات عن العمل",
+    icon: "tim-icons icon-molecule-40",
+    component: Dashboard,
+    layout: "/admin",
+  },
   {
     path: "/notifications",
     name: "Уведомления",
