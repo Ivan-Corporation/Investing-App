@@ -1,73 +1,39 @@
 import React from "react";
 
 // reactstrap components
-import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
+import { Card, CardHeader, CardBody, CardTitle, Row, Col, Progress } from "reactstrap";
 
 function Typography() {
   return (
     <>
       <div className="content">
         <Row>
-          <Col md="12">
+          <Col md="8">
             <Card>
               <CardHeader className="mb-5">
                 <h5 className="card-category">Заголовок</h5>
                 <CardTitle tag="h3">
-                  Достижения?
+                 НННН
                 </CardTitle>
               </CardHeader>
               <CardBody>
                 
-                <div className="typography-line">
-                  <span>Цитата</span>
-                  <blockquote>
-                    <p className="blockquote blockquote-primary">
-                      Жирафы бессердечные создания...<br />
-                      <br />
-                      <small>-Иван</small>
-                    </p>
-                  </blockquote>
+                
+                          <div>
+                  <div className="text-center">0%</div>
+                  <Progress />
+                  
+                  
+                  <div className="text-center">Прогресс</div>
+                  <Progress multi>
+                    <Progress bar value="15" />
+                    <Progress bar color="success" value="30" />
+                    <Progress bar color="info" value="25" />
+                    <Progress bar color="warning" value="20" />
+                    <Progress bar color="danger" value="5" />
+                  </Progress>
                 </div>
-                <CardTitle tag="h3">
-                  Стили 
-                </CardTitle><hr/><br></br>
 
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-muted">
-                    Тест текста в разных вариациях
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-primary">
-                  Тест текста в разных вариациях
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-info">
-                  Тест текста в разных вариациях
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-success">
-                  Тест текста в разных вариациях
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-warning">
-                  Тест текста в разных вариациях
-                  </p>
-                </div>
-                <div className="typography-line">
-                  <span>Текст</span>
-                  <p className="text-danger">
-                  Тест текста в разных вариациях
-                  </p>
-                </div>
                 
               </CardBody>
             </Card>

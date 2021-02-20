@@ -127,7 +127,7 @@ function Dashboard(props) {
                 <h5 className="card-category">Отчеты:</h5>
                 <h3>Доход в квартал</h3>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-delivery-fast text-primary" />{" "}
+                  <i className="tim-icons icon-delivery-fast text-danger" />{" "}
                   3,500€
                 </CardTitle>
               </CardHeader>
@@ -172,7 +172,7 @@ function Dashboard(props) {
                 <h5 className="card-category">Всего:</h5>
                 <h3>Акции в обращении</h3>
                 <CardTitle tag="h3">
-                  <i className="tim-icons icon-money-coins text-info" /> 2.123.444
+                  <i className="tim-icons icon-money-coins text-white" /> 2.123.444
                 </CardTitle>
               </CardHeader>     
               <CardBody>

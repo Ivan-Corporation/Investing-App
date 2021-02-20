@@ -199,11 +199,21 @@ function AdminNavbar(props) {
         <ModalHeader
           toggle={toggleAuthorisation}>Авторизация</ModalHeader>
         <ModalBody>
+      <Form>
+        <FormGroup>
+         <Label for="exampleEmail">Email</Label>
+          <Input type="email" name="email" id="exampleEmail" placeholder="Электронная почта" />
+        </FormGroup>
 
+         <FormGroup>
+          <Label for="examplePassword">Пароль</Label>
+          <Input type="password" name="password" id="examplePassword" placeholder="Пароль" />
+        </FormGroup>
+      </Form>
+
+      <Button color="info" size="lg" block>Войти</Button>
         </ModalBody>
-        <ModalFooter>
-
-        </ModalFooter>
+        
       </Modal>
 
 
@@ -215,6 +225,7 @@ function AdminNavbar(props) {
         <ModalHeader
           toggle={toggleRegistration}>Регистрация</ModalHeader>
         <ModalBody>
+
 
         </ModalBody>
         <ModalFooter>

@@ -62,7 +62,7 @@ function Notifications() {
           <NotificationAlert ref={notificationAlertRef} />
         </div>
         <Row>
-          <Col md="6">
+          <Col md="10">
             <Card>
               <CardHeader>
                 <CardTitle tag="h4">Уведомления:</CardTitle>
@@ -101,48 +101,7 @@ function Notifications() {
             </Card>
 
           </Col>
-          <Col md="6">
-            <Card>
-              <CardHeader>
-                <CardTitle tag="h4">Состояния уведомлений (нужны ли?)</CardTitle>
-              </CardHeader>
-              <CardBody>
-                <UncontrolledAlert color="primary">
-                  <span>
-                    <b>Главное - </b>
-                    ".alert-primary"
-                  </span>
-                </UncontrolledAlert>
-                <UncontrolledAlert color="info">
-                  <span>
-                    <b>Обычное - </b>
-                    ".alert-info"
-                  </span>
-                </UncontrolledAlert>
-                <UncontrolledAlert color="success">
-                  <span>
-                    <b>Успех - </b>
-                    ".alert-success"
-                  </span>
-                </UncontrolledAlert>
-                <UncontrolledAlert color="warning">
-                  <span>
-                    <b>Особое внимание! - </b>
-                    ".alert-warning"
-                  </span>
-                </UncontrolledAlert>
-                <Col md="2">
-                          <Button
-                            block
-                            color="primary"
-                            onClick={() => notify("br")}
-                          >
-                            Тест
-                          </Button>
-                        </Col>
-              </CardBody>
-            </Card>
-          </Col>
+          
 
           
         </Row>
