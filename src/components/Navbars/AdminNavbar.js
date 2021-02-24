@@ -195,22 +195,22 @@ function AdminNavbar(props) {
       <Modal
         isOpen={modalAuthorisation}
         toggle={toggleAuthorisation}
-        className={className}>
+        modalClassName="modal-black">
         <ModalHeader
-          toggle={toggleAuthorisation}>Авторизация</ModalHeader>
+          toggle={toggleAuthorisation}><h4>Авторизация</h4></ModalHeader>
         <ModalBody>
       <Form>
         <FormGroup>
          <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="Электронная почта" />
+          <Input type="email" name="email" id="exampleEmail" placeholder="" />
         </FormGroup>
 
          <FormGroup>
           <Label for="examplePassword">Пароль</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="Пароль" />
+          <Input type="password" name="password" id="examplePassword" placeholder="" />
         </FormGroup>
       </Form>
-
+<br></br>
       <Button color="info" size="lg" block>Войти</Button>
         </ModalBody>
         
@@ -221,12 +221,30 @@ function AdminNavbar(props) {
       <Modal
         isOpen={modalRegistration}
         toggle={toggleRegistration}
-        className={className}>
-        <ModalHeader
-          toggle={toggleRegistration}>Регистрация</ModalHeader>
+        modalClassName="modal-black">
+        <ModalHeader 
+          toggle={toggleRegistration}><h4>Регистрация</h4></ModalHeader>
         <ModalBody>
 
+        <Form>
+        <FormGroup>
+         <Label for="exampleEmail">Email</Label>
+          <Input type="email" name="email" id="exampleEmail" placeholder="" />
+        </FormGroup>
 
+         <FormGroup>
+          <Label for="examplePassword">Пароль</Label>
+          <Input type="password" name="password" id="examplePassword" placeholder="" />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="examplePassword">Подтвердите пароль</Label>
+          <Input type="password" name="password" id="examplePassword" placeholder="" />
+        </FormGroup>
+
+      </Form>
+      <br></br>
+      <Button color="info" size="lg" block>Зарегистрироваться</Button>
         </ModalBody>
         <ModalFooter>
 

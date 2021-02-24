@@ -1,5 +1,7 @@
 import React from "react";
 
+import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
+import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 // reactstrap components
 import {
   Card,
@@ -74,6 +76,17 @@ function Tables() {
             </Card>
           </Col>
         </Row>
+
+
+      <Row>
+      <Col md="12">
+        <BackgroundColorContext.Consumer>
+      {({ color, changeColor }) => (
+        <FixedPlugin bgColor={color} handleBgClick={changeColor} />
+        )}
+    </BackgroundColorContext.Consumer>
+    </Col>
+    </Row>
       </div>
     </>
   );

@@ -164,19 +164,7 @@ function UserProfile() {
                  <center> Так и умирает свобода... Под гром апплодисментов</center>
                 </div>
               </CardBody>
-              <CardFooter>
-                <div className="button-container">
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="facebook" > 
-                    <i className="fab fa-facebook" />
-                  </Button>
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="twitter">
-                    <i className="fab fa-twitter" />
-                  </Button>
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="google">
-                    <i className="fab fa-google-plus" />
-                  </Button>
-                </div>
-              </CardFooter>
+              
             </Card>
           </Col>
         </Row>

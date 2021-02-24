@@ -2,29 +2,67 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Nav, NavItem, NavLink } from "reactstrap";
+import { CardFooter, Col, Container, Nav, NavItem, NavLink, Button } from "reactstrap";
 
 function Footer() {
   return (
-    <footer className="footer">
+    <div>
+    <div className="footer">
       <Container fluid>
         <Nav>
+          <Col>
           <NavItem>
             <NavLink href="https://github.com/Ivan-Corporation">
-              Github
+              Ошибка?
             </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="https://github.com/Ivan-Corporation">
-              О нас
+              Предложения
             </NavLink>
           </NavItem>
+          </Col>
+
+          <Col>
           <NavItem>
             <NavLink href="https://github.com/Ivan-Corporation">
-              Блог Паши?
+              Работа
+            </NavLink>
+          </NavItem>  
+        <NavItem>
+            <NavLink href="https://github.com/Ivan-Corporation">
+              Реклама
             </NavLink>
           </NavItem>
+          </Col>
+
+          <Col>
+          <NavItem>
+            <NavLink href="https://github.com/Ivan-Corporation">
+              Сотрудничество
+            </NavLink>
+          </NavItem>
+         
+          </Col>
+
         </Nav>
+
+        <Col>
+                <div className="button-container">
+                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="facebook" > 
+                    <i className="fab fa-facebook" />
+                  </Button>
+                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="twitter">
+                    <i className="fab fa-twitter" />
+                  </Button>
+                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="google">
+                    <i className="fab fa-google-plus" />
+                  </Button>
+                </div>
+              </Col>
+
+
+
         <div className="copyright">
           © {new Date().getFullYear()} сделано {" "}
           <i className="tim-icons icon-bulb-63" /> {" "}
@@ -37,7 +75,13 @@ function Footer() {
           для инвесторов.
         </div>
       </Container>
-    </footer>
+      </div>
+
+
+    
+
+    
+    </div>
   );
 }
 

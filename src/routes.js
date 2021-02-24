@@ -34,7 +34,7 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/stock-info",
+    path: "/crypto",
     name: "Криптовалюта",
     rtlName: "معلومات عن العمل",
     icon: "tim-icons icon-molecule-40",
@@ -48,32 +48,39 @@ var routes = [
     icon: "tim-icons icon-bell-55",
     component: Notifications,
     layout: "/admin",
-  },
+  }, 
   {
-    path: "/user-profile",
-    name: "Профиль",
-    rtlName: "ملف تعريفي للمستخدم",
-    icon: "tim-icons icon-badge",
-    component: UserProfile,
-    layout: "/admin",
-  },
-  {
-    path: "/tables",
+    path: "/tutorials",
     name: "Туториалы",
     rtlName: "قائمة الجدول",
-    icon: "tim-icons icon-puzzle-10",
+    icon: "tim-icons icon-paper",
     component: TableList,
     layout: "/admin",
   },
   {
-    path: "/achievments",
-    name: "Шаблоны (Достяги?)",
+    path: "/calculator",
+    name: "Калькуляторы",
     rtlName: "",
-    icon: "tim-icons icon-trophy",
+    icon: "tim-icons icon-tablet-2",
     component: Typography,
     layout: "/admin",
   },
-  
+  {
+    path: "/portfolio",
+    name: "Портфель",
+    rtlName: "",
+    icon: "tim-icons icon-basket-simple",
+    component: Typography,
+    layout: "/admin",
+  },
+  {
+    path: "/settings",
+    name: "Настройки",
+    rtlName: "ملف تعريفي للمستخدم",
+    icon: "tim-icons icon-settings-gear-63",
+    component: UserProfile,
+    layout: "/admin",
+  },
   
 
 ];
