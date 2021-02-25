@@ -7,6 +7,7 @@ import TableList from "views/TableList.js";
 
 import UserProfile from "views/UserProfile.js";
 import About from "views/About";
+import Settings from "views/Settings";
 
 var routes = [
   {
@@ -78,7 +79,7 @@ var routes = [
     name: "Настройки",
     rtlName: "ملف تعريفي للمستخدم",
     icon: "tim-icons icon-settings-gear-63",
-    component: UserProfile,
+    component: Settings,
     layout: "/admin",
   },
   

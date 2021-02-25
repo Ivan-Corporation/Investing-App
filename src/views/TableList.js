@@ -1,7 +1,5 @@
 import React from "react";
 
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
-import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 // reactstrap components
 import {
   Card,
@@ -40,12 +38,26 @@ function Tables() {
                       
                       <td className="text-center">$0</td>
                     </tr>
+                    <tr>
+                      <td>Я</td>
+                      <td>Абаба</td>
+                      
+                      <td className="text-center">$0</td>
+                    </tr>
+                    <tr>
+                      <td>Я</td>
+                      <td>Абаба</td>
+                      
+                      <td className="text-center">$0</td>
+                    </tr>
                     
                   </tbody>
                 </Table>
               </CardBody>
             </Card>
           </Col>
+
+          
           <Col md="12">
             <Card className="card-plain">
               <CardHeader>
@@ -53,40 +65,13 @@ function Tables() {
                 <p className="category">без бекграунда</p>
               </CardHeader>
               <CardBody>
-                <Table className="tablesorter" responsive>
-                  <thead className="text-primary">
-                    <tr>
-                      <th>1</th>
-                      <th>2</th>
-                      <th>3</th>
-                      <th className="text-center">4</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>2</td>
-                      <td>3</td>
-                      <td className="text-center">4</td>
-                    </tr>
-                   
-                  </tbody>
-                </Table>
+                <p>fasfasfasf</p>
               </CardBody>
             </Card>
           </Col>
         </Row>
 
 
-      <Row>
-      <Col md="12">
-        <BackgroundColorContext.Consumer>
-      {({ color, changeColor }) => (
-        <FixedPlugin bgColor={color} handleBgClick={changeColor} />
-        )}
-    </BackgroundColorContext.Consumer>
-    </Col>
-    </Row>
       </div>
     </>
   );

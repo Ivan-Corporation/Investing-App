@@ -91,11 +91,6 @@ function AdminNavbar(props) {
   return (
     <>
 
-
-
-
-
-
       <Navbar className={classNames("navbar-absolute", color)} expand="lg">
         <Container fluid>
           <div className="navbar-wrapper">
@@ -210,7 +205,7 @@ function AdminNavbar(props) {
           <Input type="password" name="password" id="examplePassword" placeholder="" />
         </FormGroup>
       </Form>
-<br></br>
+      <br></br>
       <Button color="info" size="lg" block>Войти</Button>
         </ModalBody>
         

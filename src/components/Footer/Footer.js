@@ -13,7 +13,7 @@ function Footer() {
           <Col>
           <NavItem>
             <NavLink href="https://github.com/Ivan-Corporation">
-              Ошибка?
+              Нашли ошибки?
             </NavLink>
           </NavItem>
           <NavItem>
@@ -26,7 +26,7 @@ function Footer() {
           <Col>
           <NavItem>
             <NavLink href="https://github.com/Ivan-Corporation">
-              Работа
+              Работа у нас
             </NavLink>
           </NavItem>  
         <NavItem>
@@ -47,16 +47,22 @@ function Footer() {
 
         </Nav>
 
-        <Col>
+        <Col >
                 <div className="button-container">
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="facebook" > 
-                    <i className="fab fa-facebook" />
+                  <Button className="btn-icon btn-round" color="facebook" > 
+                    <a href="https://github.com/Ivan-Corporation" className="fab fa-facebook" />
                   </Button>
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="twitter">
-                    <i className="fab fa-twitter" />
+                  <Button className="btn-icon btn-round" color="twitter">
+                    <a href="https://github.com/Ivan-Corporation" className="fab fa-twitter" />
                   </Button>
-                  <Button href="https://github.com/Ivan-Corporation" className="btn-icon btn-round" color="google">
-                    <i className="fab fa-google-plus" />
+                  <Button className="btn-icon btn-round" color="instagram">
+                    <a href="https://github.com/Ivan-Corporation" className="fab fa-instagram" />
+                  </Button>
+                  <Button className="btn-icon btn-round" color="telegram">
+                    <a href="https://github.com/Ivan-Corporation" className="fab fa-telegram" />
+                  </Button>
+                  <Button className="btn-icon btn-round" color="vk">
+                    <a href="https://github.com/Ivan-Corporation" className="fab fa-vk" />
                   </Button>
                 </div>
               </Col>
@@ -80,7 +86,7 @@ function Footer() {
 
     
 
-    
+    <hr></hr>
     </div>
   );
 }
