@@ -8,7 +8,7 @@ import { PropTypes } from "prop-types";
 import PerfectScrollbar from "perfect-scrollbar";
 
 // reactstrap components
-import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
+import { Container, Nav, NavLink as ReactstrapNavLink } from "reactstrap";
 import {
   BackgroundColorContext,
   backgroundColors,
@@ -91,6 +91,7 @@ function Sidebar(props) {
     }
   }
   return (
+    <div>
     <BackgroundColorContext.Consumer>
       {({ color }) => (
         <div className="sidebar" data={color}>
@@ -124,6 +125,7 @@ function Sidebar(props) {
                       <i className={prop.icon} />
                       
                       <p>
+                        
                         <br></br>
                         {rtlActive ? prop.rtlName : prop.name}</p>
                     </NavLink>
@@ -143,10 +145,23 @@ function Sidebar(props) {
               
               
             </Nav>
+           
+
+            
           </div>
         </div>
+
+
+
+
       )}
+
+
+      
     </BackgroundColorContext.Consumer>
+
+    
+    </div>
   );
 }
 

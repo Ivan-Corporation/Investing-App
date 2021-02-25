@@ -26,7 +26,7 @@ import {
   chartExample4,
 } from "variables/charts.js";
 
-function Dashboard(props) {
+function Stock(props) {
   const [bigChartData, setbigChartData] = React.useState("data1");
   const setBgChartData = (name) => {
     setbigChartData(name);
@@ -37,7 +37,7 @@ function Dashboard(props) {
       <h1>Акция - "Boening CO"</h1>
         <Row>
           
-          <Col xs="12">
+          <Col xs="9">
             <Card className="card-chart">
               <CardHeader>
                 
@@ -105,6 +105,7 @@ function Dashboard(props) {
                       </Button>
                     </ButtonGroup>
                   </Col>
+                  
                 </Row>
               </CardHeader>
               <CardBody>
@@ -117,7 +118,82 @@ function Dashboard(props) {
               </CardBody>
             </Card>
           </Col>
+
+
+          <Col lg="3">
+            <Card className="card-chart">
+              <CardHeader>
+                
+                <h4 className="text-center"><b>Топ 4 акции по росту</b></h4>
+                <CardTitle tag="h3">
+                  
+                </CardTitle>
+              </CardHeader>
+              <CardBody>
+                <div>
+                <Table className="tablesorter" >
+                  <thead className="text-primary">
+                    <tr>
+                      <th>Название</th>
+                      <th className="text-center">Цена</th>
+                      <th className="text-center">Скачок</th>
+                      <th className="text-center">%</th>
+                    </tr>
+                    
+                  </thead>
+                  
+                  <tbody>
+                    
+                    <tr>
+                      
+                      <td>
+                        <a href="https://github.com/Ivan-Corporation">CVX</a>
+                        </td>
+                      <td className="text-center">133</td>
+                      <td className="text-center">+0.50</td>                      
+                      <td className="text-center">-1,68%</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <a href="https://github.com/Ivan-Corporation">GE</a>
+                      </td>
+                      <td className="text-center">12</td>
+                      <td className="text-center">+0.50</td>                     
+                      <td className="text-center">-1,68%</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <a href="https://github.com/Ivan-Corporation">F</a>
+                      </td>
+                      <td className="text-center">13</td>
+                      <td className="text-center">+0.50</td>                      
+                      <td className="text-center">-1,68%</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                      <a href="https://github.com/Ivan-Corporation">AAPL</a>
+                      </td>
+                      <td className="text-center">55</td>
+                      <td className="text-center">-0.50</td>                     
+                      <td className="text-center">-1,68%</td>
+                    </tr>
+
+                    
+                  </tbody>
+                </Table>
+                 
+                </div>
+              </CardBody>
+            </Card>
+          </Col>
+
+
+
+
         </Row>
+
+
 
 
         <Row>
@@ -260,4 +336,4 @@ function Dashboard(props) {
   );
 }
 
-export default Dashboard;
+export default Stock;

@@ -56,7 +56,7 @@ let chartExample1 = {
   data1: (canvas) => {
     let ctx = canvas.getContext("2d");
 
-    let gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+    let gradientStroke = ctx.createLinearGradient(0, 210, 50, 50);
 
     gradientStroke.addColorStop(1, "rgba(29,140,248,0.2)");
     gradientStroke.addColorStop(0.4, "rgba(29,140,248,0.0)");
@@ -93,7 +93,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
+          data: [0, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
         },
       ],
     };
@@ -138,7 +138,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
+          data: [0, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
         },
       ],
     };
@@ -183,7 +183,7 @@ let chartExample1 = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130],
+          data: [60, 80, 65, 150, 80, 105, 90, 130, 70, 115, 60, 130],
         },
       ],
     };
@@ -192,7 +192,7 @@ let chartExample1 = {
 };
 
 // #########################################
-// // // used inside src/views/Dashboard.js
+
 // #########################################
 let chartExample2 = {
   data: (canvas) => {
@@ -310,7 +310,7 @@ let chartExample3 = {
 };
 
 // #########################################
-// // // used inside src/views/Dashboard.js
+
 // #########################################
 const chartExample4 = {
   data: (canvas) => {
@@ -398,9 +398,152 @@ const chartExample4 = {
   },
 };
 
+// ########################################
+
+let Cryptocurrency = {
+  cryptoData1: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke = ctx.createLinearGradient(0, 0, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(21, 22, 26, 0.75)");
+    gradientStroke.addColorStop(0.4, "rgba(21, 22, 26, 1)");
+    gradientStroke.addColorStop(0, "rgba(21, 22, 26, 1)"); //blue colors
+
+    return {
+      labels: [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь",
+      ],
+      datasets: [
+        {
+          label: "Цена",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#cc0000",
+          borderWidth: 1,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#ffff00",
+          pointBorderColor: "rgba(255,0,255,0)",
+          pointHoverBackgroundColor: "#cc0000",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 2.5,
+          data: [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
+        },
+      ],
+    };
+  },
+  cryptoData2: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke = ctx.createLinearGradient(0, 0, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(21, 22, 26, 0.75)");
+    gradientStroke.addColorStop(0.4, "rgba(21, 22, 26, 1)");
+    gradientStroke.addColorStop(0, "rgba(21, 22, 26, 1)"); //blue colors
+
+    return {
+      labels: [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь",
+      ],
+      datasets: [
+        {
+          label: "Цена",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#cc0000",
+          borderWidth: 1,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#ffff00",
+          pointBorderColor: "rgba(255,0,255,0)",
+          pointHoverBackgroundColor: "#cc0000",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 2.5,
+          data: [100, 0, 100, 0, 85, 100, 100, 50, 30, 20, 10, 0],
+        },
+      ],
+    };
+  },
+  cryptoData3: (canvas) => {
+    let ctx = canvas.getContext("2d");
+
+    let gradientStroke = ctx.createLinearGradient(0, 0, 0, 50);
+
+    gradientStroke.addColorStop(1, "rgba(21, 22, 26, 0.75)");
+    gradientStroke.addColorStop(0.4, "rgba(21, 22, 26, 1)");
+    gradientStroke.addColorStop(0, "rgba(21, 22, 26, 1)"); //blue colors
+
+    return {
+      labels: [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь",
+      ],
+      datasets: [
+        {
+          label: "Цена",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: "#cc0000",
+          borderWidth: 1,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#ffff00",
+          pointBorderColor: "rgba(255,0,255,0)",
+          pointHoverBackgroundColor: "#cc0000",
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 2.5,
+          data: [1, 70, 90, 70, 85, 160, 75, 60, 90, 180, 110, 0],
+        },
+      ],
+    };
+  },
+  options: chart1_2_options,
+};
+
+
 module.exports = {
   chartExample1, // in src/views/Dashboard.js
   chartExample2, // in src/views/Dashboard.js
   chartExample3, // in src/views/Dashboard.js
   chartExample4, // in src/views/Dashboard.js
+  Cryptocurrency
 };

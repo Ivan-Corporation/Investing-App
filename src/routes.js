@@ -1,4 +1,4 @@
-import Dashboard from "views/Dashboard.js";
+import Stock from "views/Stock.js";
 import Icons from "views/Icons.js";
 import Typography from "views/Typography.js";
 import Notifications from "views/Notifications.js";
@@ -8,6 +8,7 @@ import TableList from "views/TableList.js";
 import UserProfile from "views/UserProfile.js";
 import About from "views/About";
 import Settings from "views/Settings";
+import Crypto from "views/Crypto";
 
 var routes = [
   {
@@ -23,7 +24,7 @@ var routes = [
     name: "Основная информация",
     rtlName: "معلومات عن العمل",
     icon: "tim-icons icon-coins",
-    component: Dashboard,
+    component: Stock,
     layout: "/admin",
   },
   {
@@ -39,7 +40,7 @@ var routes = [
     name: "Криптовалюта",
     rtlName: "معلومات عن العمل",
     icon: "tim-icons icon-molecule-40",
-    component: Dashboard,
+    component: Crypto,
     layout: "/admin",
   },
   {
