@@ -1,6 +1,8 @@
 import FixedPlugin from "components/FixedPlugin/FixedPlugin";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 import React from "react";
+import settings from "../assets/svg/settings.svg"
+
 
 // reactstrap components
 import {
@@ -25,7 +27,7 @@ function Settings() {
           <Col md="8">
             <Card>
               <CardHeader>
-                <h5 className="title">Редактирование профиля</h5>
+                <h4 className="title"> <img src={settings}/> Редактирование профиля</h4>
               </CardHeader>
               <CardBody>
                 <Form>

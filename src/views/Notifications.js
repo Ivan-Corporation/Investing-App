@@ -2,6 +2,8 @@ import React from "react";
 // react plugin for creating notifications over the dashboard
 import NotificationAlert from "react-notification-alert";
 
+import bell from '../assets/svg/bell.svg'
+
 // reactstrap components
 import {
   Alert,
@@ -65,7 +67,7 @@ function Notifications() {
           <Col md="10">
             <Card>
               <CardHeader>
-                <CardTitle tag="h4">Уведомления:</CardTitle>
+                <CardTitle tag="h3"><img src={bell}/> Уведомления:</CardTitle>
               </CardHeader>
               <CardBody>
                 

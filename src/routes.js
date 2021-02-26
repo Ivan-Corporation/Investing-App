@@ -3,12 +3,12 @@ import Icons from "views/Icons.js";
 import Typography from "views/Typography.js";
 import Notifications from "views/Notifications.js";
 
-import TableList from "views/TableList.js";
-
-import UserProfile from "views/UserProfile.js";
 import About from "views/About";
 import Settings from "views/Settings";
 import Crypto from "views/Crypto";
+import Tutorials from "views/Tutorials";
+import Calculators from "views/Calculators";
+import Portfolio from "views/Portfolio";
 
 var routes = [
   {
@@ -56,7 +56,7 @@ var routes = [
     name: "Туториалы",
     rtlName: "قائمة الجدول",
     icon: "tim-icons icon-paper",
-    component: TableList,
+    component: Tutorials,
     layout: "/admin",
   },
   {
@@ -64,7 +64,7 @@ var routes = [
     name: "Калькуляторы",
     rtlName: "",
     icon: "tim-icons icon-tablet-2",
-    component: Typography,
+    component: Calculators,
     layout: "/admin",
   },
   {
@@ -72,7 +72,7 @@ var routes = [
     name: "Портфель",
     rtlName: "",
     icon: "tim-icons icon-basket-simple",
-    component: Typography,
+    component: Portfolio,
     layout: "/admin",
   },
   {

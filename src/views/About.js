@@ -1,5 +1,7 @@
 import React from "react";
 
+import lamp from '../assets/svg/lamp.svg'
+
 // reactstrap components
 import { Card, CardHeader, CardBody, CardTitle, Row, Col } from "reactstrap";
 
@@ -13,7 +15,7 @@ function About() {
               <CardHeader className="mb-5">
                 <h5 className="card-category">Коротко</h5>
                 <CardTitle tag="h2">
-                  О проекте
+                 О проекте <img src={lamp} align='right'/>
                 </CardTitle>
               </CardHeader>
               <CardBody>
