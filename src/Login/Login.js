@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Login.css";
 import PropTypes from "prop-types";
+import { Card, Col, Row } from "reactstrap";
+
 
 
 async function loginUser (credentials) {
@@ -27,9 +29,22 @@ export default function Login ({ setToken }) {
     setToken(token);
   };
 
-  return (
-    
-    <div className="login-wrapper">
+
+  
+
+  return (   
+<div className="content">
+
+<h1>Калькуляторы</h1>
+<Row>
+  <Col lg="3">
+      <Card className="card-chart">
+        </Card>
+    </Col>
+
+    <Col lg="6">
+      <Card className="card-chart">
+      <div className="login-wrapper">
       <h1>Please Enter Fields</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -44,10 +59,27 @@ export default function Login ({ setToken }) {
           <button type="submit">Submit</button>
         </div>
       </form>
+      <hr></hr>
     </div>
+    </Card>
+    </Col>
+
+    <Col lg="3">
+      <Card className="card-chart">
+        
+      </Card>
+    </Col>
+
+
+  </Row>
+
+
+  </div>
     
   );
 }
+
+
 
 Login.propTypes = {
   setToken: PropTypes.func.isRequired
