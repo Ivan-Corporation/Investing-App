@@ -18,8 +18,17 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Login from "Login/Login";
+import useToken from "useToken";
 
 function Settings() {
+
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    
+    return <Login setToken={setToken}/>;
+  }else
   return (
     <>
       <div className="content">

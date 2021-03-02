@@ -16,6 +16,9 @@ import routes from "routes.js";
 import logo from "assets/img/react-logo.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
+import useToken from "useToken";
+import Login from "Login/Login";
+
 var ps;
 
 function Admin(props) {
@@ -63,6 +66,12 @@ function Admin(props) {
     document.documentElement.classList.toggle("nav-open");
     setsidebarOpened(!sidebarOpened);
   };
+
+//////////////////////////////////
+
+  const { token, setToken } = useToken();
+
+
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
@@ -74,7 +83,7 @@ function Admin(props) {
           />
         );
       } else {
-        return null;
+        return <Login setToken={setToken}/>;
       }
     });
   };
@@ -86,6 +95,10 @@ function Admin(props) {
     }
     return "Brand";
   };
+
+  
+
+
   return (
     <BackgroundColorContext.Consumer>
       {({ color, changeColor }) => (

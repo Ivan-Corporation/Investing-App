@@ -16,6 +16,8 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import useToken from "useToken";
+import Login from "Login/Login";
 
 function Notifications() {
   const notificationAlertRef = React.useRef(null);
@@ -57,6 +59,14 @@ function Notifications() {
     };
     notificationAlertRef.current.notificationAlert(options);
   };
+
+
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    
+    return <Login setToken={setToken}/>;
+  }else
   return (
     <>
       <div className="content">

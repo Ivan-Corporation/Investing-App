@@ -10,8 +10,16 @@ import wallet from './../assets/svg/wallet.svg'
 
 // reactstrap components
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
+import useToken from "useToken";
+import Login from "Login/Login";
 
 function Portfolio() {
+  const { token, setToken } = useToken();
+
+  if (!token) {
+    
+    return <Login setToken={setToken}/>;
+  }else
   return (
     <>
       <div className="content">
