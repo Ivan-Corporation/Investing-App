@@ -74,7 +74,7 @@ function Admin(props) {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/ru") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -121,11 +121,11 @@ function Admin(props) {
               />
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="*" to="/admin/stock-info" />
+                <Redirect from="*" to="/ru/stock-info" />
               </Switch>
               {
                 // we don't want the Footer to be rendered on map page
-                location.pathname === "/admin/maps" ? null : <Footer fluid />
+                location.pathname === "/ru/maps" ? null : <Footer fluid />
               }
             </div>
           </div>

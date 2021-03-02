@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Login.css";
 import PropTypes from "prop-types";
-import { Card, Col, Row } from "reactstrap";
+import { Card, Col, Label, Row, FormGroup, Button } from "reactstrap";
+
 
 
 
@@ -34,8 +35,10 @@ export default function Login ({ setToken }) {
 
   return (   
 <div className="content">
-
-<h1>Калькуляторы</h1>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 <Row>
   <Col lg="3">
       <Card className="card-chart">
@@ -45,18 +48,23 @@ export default function Login ({ setToken }) {
     <Col lg="6">
       <Card className="card-chart">
       <div className="login-wrapper">
-      <h1>Please Enter Fields</h1>
+      <h1>Авторизация</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)}/>
-        </label>
-        <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setUserPassword(e.target.value)}/>
-        </label>
+      <FormGroup>
+        <Label>
+          <p>Логин</p>
+          <input className="input-size" type="text" onChange={e => setUserName(e.target.value)}/>
+        </Label>
+        </FormGroup>
+        <FormGroup >
+        <Label >
+          <p>Пароль</p>
+          <input className="input-size" type="password" onChange={e => setUserPassword(e.target.value)}/>
+        </Label>
+        </FormGroup>
         <div>
-          <button type="submit">Submit</button>
+          <hr></hr>
+        <Button className="button-size" color="danger" size='lg'>Войти</Button>
         </div>
       </form>
       <hr></hr>

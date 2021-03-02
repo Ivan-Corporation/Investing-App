@@ -18,12 +18,12 @@ ReactDOM.render(
     <BackgroundColorWrapper>
       <BrowserRouter>
         <Switch>
-          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Route path="/ru" render={(props) => <AdminLayout {...props} />} />
 
 
           
 
-          <Redirect from="/" to="/admin/stock-info" />
+          <Redirect from="/" to="/ru/stock-info" />
         </Switch>
       </BrowserRouter>
     </BackgroundColorWrapper>
