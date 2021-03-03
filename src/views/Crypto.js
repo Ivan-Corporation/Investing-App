@@ -132,7 +132,7 @@ function Crypto(props) {
               </CardHeader>
               <CardBody>
                 <div>
-                <Table className="tablesorter" >
+                <Table responsive className="tablesorter" >
                   <thead className="text-primary">
                     <tr>
                       <th>Название</th>

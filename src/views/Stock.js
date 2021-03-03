@@ -131,7 +131,7 @@ function Stock(props) {
               </CardHeader>
               <CardBody>
                 <div>
-                <Table className="tablesorter" >
+                <Table responsive className="tablesorter" >
                   <thead className="text-primary">
                     <tr>
                       <th>Название</th>
@@ -267,7 +267,7 @@ function Stock(props) {
                 <CardTitle tag="h4">Индексы?</CardTitle>
               </CardHeader>
               <CardBody>
-                <Table className="tablesorter" >
+                <Table responsive className="tablesorter" >
                   <thead className="text-primary">
                     <tr>
                       <th>Биржа</th>

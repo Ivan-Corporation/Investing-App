@@ -19,9 +19,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route path="/ru" render={(props) => <AdminLayout {...props} />} />
-
-
-          
+         
 
           <Redirect from="/" to="/ru/stock-info" />
         </Switch>

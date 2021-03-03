@@ -30,7 +30,7 @@ import {
   FormText,
   Label
 } from "reactstrap";
-import Login from "Login/Login";
+
 
 
 function NotAuthNavbar(props) {
@@ -86,6 +86,17 @@ function NotAuthNavbar(props) {
 
 
 
+ // this function opens and closes the sidebar on small devices
+ const [sidebarOpened, setsidebarOpened] = React.useState(
+  document.documentElement.className.indexOf("nav-open") !== -1
+);
+
+ const toogleSidebar = () => {
+  document.documentElement.classList.toggle("nav-open");
+  setsidebarOpened(!sidebarOpened);
+};
+
+
 
   return (
     <>
@@ -98,7 +109,9 @@ function NotAuthNavbar(props) {
                 toggled: props.sidebarOpened,
               })}
             >
-              <NavbarToggler onClick={props.toggleSidebar}>
+
+              {/* Here it is mobile version toogler */}
+              <NavbarToggler onClick={toogleSidebar}>
                 <span className="navbar-toggler-bar bar1" />
                 <span className="navbar-toggler-bar bar2" />
                 <span className="navbar-toggler-bar bar3" />

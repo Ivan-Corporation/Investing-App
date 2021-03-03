@@ -18,6 +18,7 @@ import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
 import useToken from "useToken";
 import Login from "Login/Login";
+import { NavbarToggler } from "reactstrap";
 
 var ps;
 
@@ -62,7 +63,7 @@ function Admin(props) {
     }
   }, [location]);
   // this function opens and closes the sidebar on small devices
-  const toggleSidebar = () => {
+  const toggleSidebar = (props) => {
     document.documentElement.classList.toggle("nav-open");
     setsidebarOpened(!sidebarOpened);
   };
@@ -119,6 +120,7 @@ function Admin(props) {
                 toggleSidebar={toggleSidebar}
                 sidebarOpened={sidebarOpened}
               />
+              
               <Switch>
                 {getRoutes(routes)}
                 <Redirect from="*" to="/ru/stock-info" />
