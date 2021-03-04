@@ -30,6 +30,8 @@ import {
   FormText,
   Label
 } from "reactstrap";
+import { Redirect } from "react-router-dom";
+import Login from "Login/Login";
 
 
 
@@ -67,22 +69,7 @@ function NotAuthNavbar(props) {
   };
 
 
-  // Modal logic
-  const {
-    buttonLabel,
-    className
-  } = props;
 
-
-  const [modalRegistration, setModalRegistration] = useState(false);
-
-  const [modalAuthorisation, setModalAuthorisation] = useState(false);
-
-  
-
-  const toggleRegistration = () => setModalRegistration(!modalRegistration);
-
-  const toggleAuthorisation = () => setModalAuthorisation(!modalAuthorisation);
 
 
 
@@ -131,19 +118,8 @@ function NotAuthNavbar(props) {
           <Collapse navbar isOpen={collapseOpen}>
             <Nav className="ml-auto" navbar>
 
-              <InputGroup className="search-bar">
-                <Button color="danger" onClick={toggleRegistration}>
-                  <i className="tim-icons icon-spaceship" />Регистрация
+              
 
-                </Button>
-              </InputGroup>
-
-              <InputGroup className="search-bar">
-                <Button color="info" onClick={toggleAuthorisation}>
-                  <i className="tim-icons icon-single-02" />Авторизация
-
-                </Button>
-              </InputGroup>
 
 
 
@@ -158,6 +134,14 @@ function NotAuthNavbar(props) {
 
 
 
+              <InputGroup className="search-bar">
+                <a href='/registration'>
+                <Button >
+                  <i className="tim-icons icon-single-02" />Регистрация
+                
+                </Button>
+                </a>
+              </InputGroup>
 
 
 
@@ -170,67 +154,6 @@ function NotAuthNavbar(props) {
         </Container>
       </Navbar>
 
-
-
-
-      <Modal
-        isOpen={modalAuthorisation}
-        toggle={toggleAuthorisation}
-        modalClassName="modal-black">
-        <ModalHeader
-          toggle={toggleAuthorisation}><h4>Авторизация</h4></ModalHeader>
-        <ModalBody>
-      <Form>
-        <FormGroup>
-         <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="" />
-        </FormGroup>
-
-         <FormGroup>
-          <Label for="examplePassword">Пароль</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="" />
-        </FormGroup>
-      </Form>
-      <br></br>
-      <Button color="info" size="lg" block>Войти</Button>
-        </ModalBody>
-        
-      </Modal>
-
-
-
-      <Modal
-        isOpen={modalRegistration}
-        toggle={toggleRegistration}
-        modalClassName="modal-black">
-        <ModalHeader 
-          toggle={toggleRegistration}><h4>Регистрация</h4></ModalHeader>
-        <ModalBody>
-
-        <Form>
-        <FormGroup>
-         <Label for="exampleEmail">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="" />
-        </FormGroup>
-
-         <FormGroup>
-          <Label for="examplePassword">Пароль</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="" />
-        </FormGroup>
-
-        <FormGroup>
-          <Label for="examplePassword">Подтвердите пароль</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="" />
-        </FormGroup>
-
-      </Form>
-      <br></br>
-      <Button color="info" size="lg" block>Зарегистрироваться</Button>
-        </ModalBody>
-        <ModalFooter>
-
-        </ModalFooter>
-      </Modal>
 
 
 

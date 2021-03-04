@@ -1,0 +1,17 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%;
+    border-color: honeydew;
+    border: 3px solid
+}
+
+.input-size {
+          
+}
+
+.button-size {
+       width: 100%;   
+}
+

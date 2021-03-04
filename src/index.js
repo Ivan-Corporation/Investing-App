@@ -12,6 +12,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import ThemeContextWrapper from "./components/ThemeWrapper/ThemeWrapper";
 import BackgroundColorWrapper from "./components/BackgroundColorWrapper/BackgroundColorWrapper";
+import Registration from "Registration/Registration";
+
 
 ReactDOM.render(
   <ThemeContextWrapper>
@@ -19,7 +21,11 @@ ReactDOM.render(
       <BrowserRouter>
         <Switch>
           <Route path="/ru" render={(props) => <AdminLayout {...props} />} />
+          <Route path="/registration" render={(props) => <Registration {...props} />} />
+
          
+
+          
 
           <Redirect from="/" to="/ru/stock-info" />
         </Switch>
