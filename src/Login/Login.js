@@ -7,7 +7,7 @@ import { Card, Col, Label, Row, FormGroup, Button } from "reactstrap";
 
 
 async function loginUser (credentials) {
-  return fetch("http://localhost:8080/login", {
+  return fetch("https://localhost:5001/swagger/index.html", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -18,13 +18,13 @@ async function loginUser (credentials) {
 }
 
 export default function Login ({ setToken }) {
-  const [username, setUserName] = useState();
+  const [userName, setUserName] = useState();
   const [password, setUserPassword] = useState();
 
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
-      username,
+      userName,
       password
     });
     setToken(token);

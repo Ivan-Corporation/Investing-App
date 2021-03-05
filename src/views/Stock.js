@@ -37,7 +37,7 @@ function Stock(props) {
       <h1>Акция - "Boening CO"</h1>
         <Row>
           
-          <Col xs="9">
+          <Col xs="12">
             <Card className="card-chart">
               <CardHeader>
                 

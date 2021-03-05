@@ -15,6 +15,7 @@ import BackgroundColorWrapper from "./components/BackgroundColorWrapper/Backgrou
 import Registration from "Registration/Registration";
 
 
+
 ReactDOM.render(
   <ThemeContextWrapper>
     <BackgroundColorWrapper>
@@ -22,10 +23,8 @@ ReactDOM.render(
         <Switch>
           <Route path="/ru" render={(props) => <AdminLayout {...props} />} />
           <Route path="/registration" render={(props) => <Registration {...props} />} />
-
-         
-
           
+
 
           <Redirect from="/" to="/ru/stock-info" />
         </Switch>

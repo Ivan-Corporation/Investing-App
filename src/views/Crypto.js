@@ -35,7 +35,7 @@ function Crypto(props) {
       <h1>Крипта - "Бузкоин"</h1>
         <Row>
           
-          <Col xs="9">
+          <Col xs="12">
             <Card className="card-chart">
               <CardHeader>
                 
