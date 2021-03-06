@@ -16,7 +16,6 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import useToken from "useToken";
 import Login from "Login/Login";
 
 function Notifications() {
@@ -61,12 +60,12 @@ function Notifications() {
   };
 
 
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
 
-  if (!token) {
+  // if (!token) {
     
-    return <Login setToken={setToken}/>;
-  }else
+  //   return <Login setToken={setToken}/>;
+  // }else
   return (
     <>
       <div className="content">

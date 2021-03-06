@@ -5,30 +5,24 @@ import { Card, Col, Label, Row, FormGroup, Button } from "reactstrap";
 
 
 
-
-async function loginUser (credentials) {
-  return fetch("https://localhost:5001/swagger/index.html", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json());
-}
-
-export default function Login ({ setToken }) {
+const Login = () => {
   const [userName, setUserName] = useState();
   const [password, setUserPassword] = useState();
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = await loginUser({
+
+    await fetch("https://localhost:5001/api/User/login", 
+  {
+    method: 'POST',
+    headers:{'Content-Type': 'application/json'},
+    credentials: 'include',
+    body: JSON.stringify({
       userName,
       password
-    });
-    setToken(token);
-  };
+    })
+  });
+  }
 
 
   
@@ -88,7 +82,4 @@ export default function Login ({ setToken }) {
 }
 
 
-
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-};
+export default Login;

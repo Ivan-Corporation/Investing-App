@@ -1,18 +1,19 @@
-import useToken from "useToken";
+
 import AuthNavbar from "./AuthNavbar/AuthNavbar";
 import NotAuthNavbar from "./NotAuthNavbar/NotAuthNavbar";
 
 
 function AdminNavbar(props) {
-  const { token, setToken } = useToken();
+
+  // const { token, setToken } = useToken();
   
 
 
-  if (!token) {
+  // if (!token) {
     
-    return <NotAuthNavbar setToken={setToken}/>;
+    return <NotAuthNavbar/>;
     
-  }else return <AuthNavbar setToken={setToken}/>;
+  // }else return <AuthNavbar setToken={setToken}/>;
 
  
 }

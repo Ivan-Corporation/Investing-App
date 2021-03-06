@@ -2,35 +2,40 @@ import React, { useState } from "react";
 import "./Registration.css";
 import PropTypes from "prop-types";
 import { Card, Col, Label, Row, FormGroup, Button } from "reactstrap";
+import { Redirect } from "react-router";
 
 
 
+const Registration = () => {
 
-async function Registration (credentials) {
-  return fetch("http://localhost:8080/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json());
-}
+  const [userName,setName] = useState('');
+  const [email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
+  const [redirect,setRedirect] = useState(false);
 
-export default function Login ({ setToken }) {
-  const [username, setUserName] = useState();
-  const [password, setUserPassword] = useState();
 
-  const handleSubmit = async e => {
-    e.preventDefault();
-    const token = await Registration({
-      username,
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+   await fetch("https://localhost:5001/api/User/register", 
+  {
+    method: 'POST',
+    headers:{'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      userName,
+      email,
       password
-    });
-    setToken(token);
-  };
+    })
+  });
 
-
+  setRedirect(true);
+  }
+  
+  if (redirect) {
+    return <Redirect to="/ru/settings"/>
+  }
+  
   
 
   return (   
@@ -53,13 +58,25 @@ export default function Login ({ setToken }) {
       <FormGroup>
         <Label>
           <p>Логин</p>
-          <input className="input-size" type="text" onChange={e => setUserName(e.target.value)}/>
+          <input className="input-size" type="text" onChange={e => setName(e.target.value)}/>
+        </Label>
+        </FormGroup>
+      <FormGroup>
+        <Label>
+          <p>email</p>
+          <input className="input-size" type="text" onChange={e => setEmail(e.target.value)}/>
         </Label>
         </FormGroup>
         <FormGroup >
         <Label >
           <p>Пароль</p>
-          <input className="input-size" type="password" onChange={e => setUserPassword(e.target.value)}/>
+          <input className="input-size" type="password" onChange={e => setPassword(e.target.value)}/>
+        </Label>
+        </FormGroup>
+        <FormGroup >
+        <Label >
+          <p>Подтвердите пароль</p>
+          <input className="input-size" type="password" onChange={e => setPassword(e.target.value)}/>
         </Label>
         </FormGroup>
         <div>
@@ -87,8 +104,4 @@ export default function Login ({ setToken }) {
   );
 }
 
-
-
-Registration.propTypes = {
-  setToken: PropTypes.func.isRequired
-};
+export default Registration;

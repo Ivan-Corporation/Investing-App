@@ -16,7 +16,7 @@ import routes from "routes.js";
 import logo from "assets/img/react-logo.png";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
 
-import useToken from "useToken";
+
 import Login from "Login/Login";
 import { NavbarToggler } from "reactstrap";
 
@@ -70,7 +70,7 @@ function Admin(props) {
 
 //////////////////////////////////
 
-  const { token, setToken } = useToken();
+
 
 
   const getRoutes = (routes) => {
@@ -84,7 +84,7 @@ function Admin(props) {
           />
         );
       } else {
-        return <Login setToken={setToken}/>;
+        return <Login />;
       }
     });
   };
