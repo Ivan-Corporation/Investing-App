@@ -2,38 +2,45 @@ import React, { useState } from "react";
 import "./Login.css";
 import PropTypes from "prop-types";
 import { Card, Col, Label, Row, FormGroup, Button } from "reactstrap";
+import { Redirect } from "react-router";
 
 
 
 const Login = () => {
-  const [userName, setUserName] = useState();
-  const [password, setUserPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setUserPassword] = useState('');
+  const [redirect,setRedirect] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("https://localhost:5001/api/User/login", 
+    await fetch("http://localhost:8000/api/login", 
   {
     method: 'POST',
     headers:{'Content-Type': 'application/json'},
-    credentials: 'include',
+    credentials: 'include', //cookies
     body: JSON.stringify({
-      userName,
+      email,
       password
     })
   });
+  setRedirect(true);
+  }
+
+  if (redirect) {
+    return <Redirect to="/ru/settings"/>
   }
 
 
   
 
   return (   
-<div className="content">
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<Row>
+  <div className="content">
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+  <Row>
   <Col lg="3">
       <Card className="card-chart">
         </Card>
@@ -46,14 +53,14 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
       <FormGroup>
         <Label>
-          <p>Логин</p>
-          <input className="input-size" type="text" onChange={e => setUserName(e.target.value)}/>
+          <p>Email</p>
+          <input className="input-size" type="email" placeholder="Email адрес" onChange={e => setEmail(e.target.value)}/>
         </Label>
         </FormGroup>
         <FormGroup >
         <Label >
           <p>Пароль</p>
-          <input className="input-size" type="password" onChange={e => setUserPassword(e.target.value)}/>
+          <input className="input-size" type="password" placeholder="Пароль" onChange={e => setUserPassword(e.target.value)}/>
         </Label>
         </FormGroup>
         <div>

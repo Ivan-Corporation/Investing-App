@@ -120,7 +120,7 @@ function Stock(props) {
           </Col>
 
 
-          <Col lg="3">
+          <Col lg="4">
             <Card className="card-chart">
               <CardHeader>
                 

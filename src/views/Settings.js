@@ -1,6 +1,6 @@
 import FixedPlugin from "components/FixedPlugin/FixedPlugin";
 import { BackgroundColorContext } from "contexts/BackgroundColorContext";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import settings from "../assets/svg/settings.svg"
 
 
@@ -25,10 +25,6 @@ function Settings() {
 
   
 
-  // if (   ) {
-    
-  //   return <Login />;
-  // }else
   return (
     <>
       <div className="content">
@@ -169,7 +165,7 @@ function Settings() {
                       className="avatar"
                       src={require("assets/img/Penultimo.jpg").default}
                     />
-                    <h3 className="title">Иваныч</h3>
+                    <h3 className="title">{username}</h3>
                   </a>
                   <p className="description">Инвестор</p>
                 </div>

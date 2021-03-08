@@ -8,7 +8,7 @@ import { Redirect } from "react-router";
 
 const Registration = () => {
 
-  const [userName,setName] = useState('');
+  const [username,setName] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const [redirect,setRedirect] = useState(false);
@@ -18,12 +18,12 @@ const Registration = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-   await fetch("https://localhost:5001/api/User/register", 
+   await fetch("http://localhost:8000/api/register", 
   {
     method: 'POST',
     headers:{'Content-Type': 'application/json'},
     body: JSON.stringify({
-      userName,
+      username,
       email,
       password
     })
