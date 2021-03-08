@@ -23,7 +23,22 @@ import Login from "Login/Login";
 
 function Settings() {
 
-  
+  const [username, setName] = useState('');
+
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetch('http://localhost:8000/api/user', {
+          headers: {'Content-Type': 'application/json'},
+          credentials: 'include',
+        });
+
+        const content = await response.json();
+
+        setName(content.username);
+      }
+    )();
+  });
 
   return (
     <>
