@@ -24,8 +24,9 @@ const Login = () => {
       password
     })
   });
-  setRedirect(true);
+  setRedirect(true)
   }
+  
 
   if (redirect) {
     return <Redirect to="/ru/settings"/>

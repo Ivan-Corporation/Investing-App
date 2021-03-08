@@ -24,6 +24,7 @@ import Login from "Login/Login";
 function Settings() {
 
   const [username, setName] = useState('');
+  
 
   useEffect(() => {
     (
@@ -40,6 +41,9 @@ function Settings() {
     )();
   });
 
+  if (!username) {
+    return <Login/>
+  }
   return (
     <>
       <div className="content">

@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route path="/ru" render={(props) => <AdminLayout {...props} />} />
           <Route path="/registration" render={(props) => <Registration {...props} />} />
           
-
+          
 
           <Redirect from="/" to="/ru/stock-info" />
         </Switch>

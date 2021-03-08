@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import boening from "./../assets/img/boening.png"
 import tesla from "./../assets/img/tesla.png"
 import gazprom from "./../assets/img/gazprom.png"
@@ -12,12 +12,29 @@ import wallet from './../assets/svg/wallet.svg'
 import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 import Login from "Login/Login";
 
-function Portfolio() {
-  
 
-  // if () {
-  //   return <Login />;
-  // } else
+
+function Portfolio() {
+  const [username, setName] = useState('');
+
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetch('http://localhost:8000/api/user', {
+          headers: {'Content-Type': 'application/json'},
+          credentials: 'include',
+        });
+
+        const content = await response.json();
+
+        setName(content.username);
+      }
+    )();
+  });
+
+  if (!username) {
+    return <Login/>
+  }
     return (
       <>
         <div className="content">

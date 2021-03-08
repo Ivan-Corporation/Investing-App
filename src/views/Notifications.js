@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // react plugin for creating notifications over the dashboard
 import NotificationAlert from "react-notification-alert";
 
@@ -17,6 +17,8 @@ import {
   Col,
 } from "reactstrap";
 import Login from "Login/Login";
+
+
 
 function Notifications() {
   const notificationAlertRef = React.useRef(null);
@@ -60,12 +62,28 @@ function Notifications() {
   };
 
 
-  // const { token, setToken } = useToken();
+  const [username, setName] = useState('');
+  
 
-  // if (!token) {
-    
-  //   return <Login setToken={setToken}/>;
-  // }else
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetch('http://localhost:8000/api/user', {
+          headers: {'Content-Type': 'application/json'},
+          credentials: 'include',
+        });
+
+        const content = await response.json();
+        
+
+        setName(content.username);
+      }
+    )();
+  });
+
+  if (!username) {
+    return <Login/>
+  }
   return (
     <>
       <div className="content">
