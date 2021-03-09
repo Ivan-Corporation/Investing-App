@@ -77,6 +77,28 @@ function AuthNavbar(props) {
   };
 
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+
+    
+    await fetch("http://localhost:8000/api/logout", 
+  {
+    method: 'POST',
+    headers:{'Content-Type': 'application/json'},
+    credentials: 'include', //cookies
+    body: JSON.stringify({
+      
+      
+    })
+    
+  });
+  
+
+  }
+
+
+
   return (
     <>
 
@@ -151,7 +173,7 @@ function AuthNavbar(props) {
                   </NavLink>
                   <DropdownItem divider tag="li" />
                   <NavLink tag="li">
-                    <DropdownItem className="nav-item">Выйти</DropdownItem>
+                    <DropdownItem className="nav-item" onClick={handleSubmit}>Выйти</DropdownItem>
                   </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>              

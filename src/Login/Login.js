@@ -6,14 +6,18 @@ import { Redirect } from "react-router";
 
 
 
-const Login = () => {
+
+
+const Login = (credentials) => {
   const [email, setEmail] = useState('');
   const [password, setUserPassword] = useState('');
   const [redirect,setRedirect] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    localStorage.setItem('jwt', 'test')
 
+    
     await fetch("http://localhost:8000/api/login", 
   {
     method: 'POST',
@@ -21,11 +25,15 @@ const Login = () => {
     credentials: 'include', //cookies
     body: JSON.stringify({
       email,
-      password
+      password,
+      
     })
+    
   });
+  
   setRedirect(true)
   }
+  
   
 
   if (redirect) {

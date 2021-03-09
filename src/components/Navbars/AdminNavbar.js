@@ -1,19 +1,34 @@
 
+import { useEffect, useState } from "react";
 import AuthNavbar from "./AuthNavbar/AuthNavbar";
 import NotAuthNavbar from "./NotAuthNavbar/NotAuthNavbar";
 
 
 function AdminNavbar(props) {
 
-  // const { token, setToken } = useToken();
+  const [username, setName] = useState('');
   
 
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetch('http://localhost:8000/api/user', {
+          headers: {'Content-Type': 'application/json'},
+          credentials: 'include',
+        });
 
-  // if (!token) {
+        const content = await response.json();
+
+        setName(content.username);
+      }
+    )();
+  });
+
+  if (!username) {
     
     return <NotAuthNavbar/>;
     
-  // }else return <AuthNavbar setToken={setToken}/>;
+  }else return <AuthNavbar />;
 
  
 }
